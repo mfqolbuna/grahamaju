@@ -1,0 +1,2690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+    <meta name="apple-mobile-web-app-title" content="CodePen">  
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">    
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>    
+    <link rel="canonical" href="https://codepen.io/alvarotrigo/pen/XWaYRKK">   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+.mySlides {
+    display: none;
+} 
+
+header {
+    width: 100%;
+    background: #11141a;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+
+.large {
+    height: 100%;
+    width: 100px;
+    margin-left: 240pt;
+    margin-right: 170pt;
+}
+nav a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+nav a:hover,nav a.active {
+    color: #0ef;
+}
+
+    .container1 {
+        width: 100%;
+        height: 100vh;
+        background: #222;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+   
+    .container2 {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+   }
+
+   h1 {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 100pt;
+   }
+
+   iframe {
+        width: 80%;
+        height: 500px;
+   }
+
+    .swiper {
+        width: 80%;
+        height: fit-content;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+    }
+
+    .swiper .swiper-button-prev, .swiper .swiper-button-next {
+        color: #fff;
+    }
+    .swiper .swiper-pagination-bullet-active {
+        background: #fff;
+    }
+
+    .image1 {
+	position: relative;
+	width: 400px;
+    }
+
+    .image1__img {
+	display: block;
+	width: 100%;
+    }
+
+    .image1__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #ffffff;
+	font-family: 'Quicksand', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.25s;
+    }
+
+    .image1__overlay--blur {
+	backdrop-filter: blur(5px);
+    }
+
+    .image1__overlay>* {
+	transform: translateY(20px);
+	transition: transform 0.25s;
+    }
+
+    .image1__overlay:hover {
+	opacity: 1;
+    }
+
+    .image1__overlay:hover>* {
+	transform: translateY(0);
+    }
+
+    .image1__title {
+	font-size: 2em;
+	font-weight: bold;
+    }
+
+    .image1__description {
+	font-size: 1.25em;
+	margin-top: 0.25em;
+    }
+
+section {
+    min-height: 100vh;
+    display: flex;
+    background: #6a7791;
+    justify-content: left;
+    align-items: left;
+}
+
+section:nth-child(1) {
+    color: #1ab3b3;
+}
+
+section:nth-child(2) {
+    color: #42455a;
+    background: #18bdbd;
+}
+
+section:nth-child(3) {
+    color: #1f8f8f;
+}
+
+section:nth-child(4) {
+    color: #12a0e2;
+    background: #e0ffff;
+}
+
+section .container {
+    margin: 100px;
+}
+
+section .text-container {
+    display: flex;
+}
+
+section .text-container .text-box {
+    margin: 20px;
+    padding: 20px;
+}
+
+section .text-container .text-box h3 {
+    font-size: 30px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+  
+@media (max-width: 900px) {
+    section h1 {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+section .text-container {
+    flex-direction: column;
+}
+}
+  
+.reveal {
+    position: relative;
+    opacity: 0;
+}
+  
+.reveal.active {
+    opacity: 1;
+}
+
+.active.fade-left {
+    animation: fade-left 1s ease-in;
+}
+
+@keyframes fade-left {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-decoration: none;
+    margin: 10px 4px;
+    margin-left: 10pt;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.gfg {
+    position: relative;
+}
+       
+/*This CSS code is defining the styles for a container that holds text*/
+
+.gfg {
+    position: relative;
+    width: 100%;
+}
+
+.geeks {
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 500px;
+    width: 900px;
+    margin-left: 30pt;
+    background-color: black;
+    bottom: 313pt;
+    opacity: 0.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.gfg1 {
+    position: absolute;
+    top: 12%;
+    left: 18.75%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.gfg2 {
+    font-size: 20px;
+    position: absolute;
+    top: 175pt;
+    margin-left: 359pt;
+    margin-right: 400pt;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: justify;
+    text-justify: inter-word;    
+}
+.gfg3 {
+    font-size: 20px;
+    position: absolute;
+    top: 300pt;
+    margin-left: 360pt;
+    margin-right: 400pt;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg4 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 37pt;
+    font-size: 41px;
+    font-weight: bold;
+}
+
+.gfg5 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 35pt;
+    margin-left: 11pt;
+    font-size: 31px;
+    font-weight: bold;
+}
+
+.gfg6 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 70pt;
+    margin-left: 34pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg7 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 70pt;
+    margin-left: 140pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg8 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 70pt;
+    margin-left: 220pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg9 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 70pt;
+    margin-left: 282pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg10 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 70pt;
+    margin-left: 370pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg11 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 70pt;
+    margin-left: 475pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg12 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 70pt;
+    margin-left: 540pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg13 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 70pt;
+    margin-left: 600pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg14 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 70pt;
+    margin-left: 675pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg15 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 70pt;
+    margin-left: 740pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg16 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 70pt;
+    margin-left: 810pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg17 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 70pt;
+    margin-left: 1955pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg18 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 70pt;
+    margin-left: 885pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg19 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 70pt;
+    margin-left: 965pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg20 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 70pt;
+    margin-left: 1020pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg21 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 70pt;
+    margin-left: 1065pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg22 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 70pt;
+    margin-left: 1140pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg23 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top:105pt;
+    margin-left: 39pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg24 { 
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 150pt;
+    margin-left: 15pt;
+    font-size: 31px;
+    font-weight: bold;
+}
+.gfg25 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 190pt;
+    margin-left: 45pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.gfg26 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 190pt;
+    margin-left: 135pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg27 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 190pt;
+    margin-left: 210pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg28 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 190pt;
+    margin-left: 280pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg29 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 190pt;
+    margin-left: 355pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg30 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 190pt;
+    margin-left: 460pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg31 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 190pt;
+    margin-left: 545pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg32 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 190pt;
+    margin-left: 610pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg33 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 190pt;
+    margin-left: 690pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg34 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 190pt;
+    margin-left: 760pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg35 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 190pt;
+    margin-left: 845pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg36 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 190pt;
+    margin-left: 955pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg37 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 190pt;
+    margin-left: 1030pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg38 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 190pt;
+    margin-left: 1100pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg39 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 225pt;
+    margin-left: 47pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg40 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 225pt;
+    margin-left: 150pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg41 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 225pt;
+    margin-left: 240pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.gfg42 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 225pt;
+    margin-left: 315pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg43 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 225pt;
+    margin-left: 365pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg44 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 225pt;
+    margin-left: 415pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg45 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 225pt;
+    margin-left: 465pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg46 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 225pt;
+    margin-left: 520pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg47 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 225pt;
+    margin-left: 590pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg48 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 225pt;
+    margin-left: 680pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg49 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 225pt;
+    margin-left: 770pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg50 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 225pt;
+    margin-left: 845pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg51 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 225pt;
+    margin-left: 940pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg52 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 225pt;
+    margin-left: 1065pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg53 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 225pt;
+    margin-left: 1145pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg54 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 260pt;
+    margin-left: 67pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg55 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 260pt;
+    margin-left: 215pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg56 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 260pt;
+    margin-left: 310pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg57 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 260pt;
+    margin-left: 390pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg58 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 260pt;
+    margin-left: 475pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg59 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 260pt;
+    margin-left: 585pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg60 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 260pt;
+    margin-left: 685pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg61 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 260pt;
+    margin-left: 745pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg62 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 260pt;
+    margin-left: 805pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg63 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 260pt;
+    margin-left: 870pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg64 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 260pt;
+    margin-left: 955pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg65 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 260pt;
+    margin-left: 1030pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg66 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 260pt;
+    margin-left: 1100pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg67 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 260pt;
+    margin-left: 1165pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg68 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 295pt;
+    margin-left: 35pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg69 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 295pt;
+    margin-left: 110pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg70 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 295pt;
+    margin-left: 195pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg71 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 295pt;
+    margin-left: 285pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg72 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 295pt;
+    margin-left: 355pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg73 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 295pt;
+    margin-left: 435pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg74 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 295pt;
+    margin-left: 540pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg75 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 295pt;
+    margin-left: 630pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg76 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 295pt;
+    margin-left: 680pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg77 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 295pt;
+    margin-left: 755pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg78 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 37pt;
+    font-size: 41px;
+    font-weight: bold;
+}
+
+.gfg79 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 45pt;
+    margin-left: 49pt;
+    font-size: 31px;
+    font-weight: bold;
+}
+
+.gfg80 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 80pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg81 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 80pt;
+    margin-left: 30pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg82 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 80pt;
+    margin-left: 85pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg83 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 115pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg84 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 115pt;
+    margin-left: 57pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg85 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 150pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg86 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 150pt;
+    margin-left: 46pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg87 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 180pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg88 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 180pt;
+    margin-left: 31pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg89 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 180pt;
+    margin-left: 85pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg90 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 210pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg91 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 210pt;
+    margin-left: 27pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg92 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 210pt;
+    margin-left: 75pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg93 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 240pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg94 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 240pt;
+    margin-left: 62pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg95 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 270pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg96 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 270pt;
+    margin-left: 37pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg97 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 270pt;
+    margin-left: 90pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg98{
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 300pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg99{
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 300pt;
+    margin-left: 42pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg100 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 300pt;
+    margin-left: 125pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg101 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 37pt;
+    margin-top: 340pt;
+    font-size: 31px;
+    font-weight: bold;
+}
+
+
+.gfg102 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 340pt;
+    margin-left: 180pt;
+    font-size: 31px;
+    font-weight: bold;
+}
+
+.gfg103 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 370pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg104 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 370pt;
+    margin-left: 33pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg105 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 370pt;
+    margin-left: 110pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg106 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 370pt;
+    margin-left: 210pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg107 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 405pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg108 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 405pt;
+    margin-left: 33pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg109 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 405pt;
+    margin-left: 110pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg110 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 405pt;
+    margin-left: 205pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg111 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 440pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg112 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 440pt;
+    margin-left: 33pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg113 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 440pt;
+    margin-left: 110pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg114 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 475pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg115 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 475pt;
+    margin-left: 45pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg116 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 475pt;
+    margin-left: 115pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg117 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 475pt;
+    margin-left: 195pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg118 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 510pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg119 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 510pt;
+    margin-left: 45pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg120 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 510pt;
+    margin-left: 115pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg121 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 510pt;
+    margin-left: 200pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg122 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 545pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg123 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 545pt;
+    margin-left: 45pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg124 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 545pt;
+    margin-left: 115pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg125 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 545pt;
+    margin-left: 200pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg126 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 575pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg127 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 575pt;
+    margin-left: 45pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg128 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 575pt;
+    margin-left: 110pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg129 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 575pt;
+    margin-left: 185pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg130 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 350pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg131 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 400pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg132 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 465pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg133 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 545pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg134 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 350pt;
+    margin-top: 30pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg135 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 400pt;
+    margin-top: 30pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg136 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 465pt;
+    margin-top: 30pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg137 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 540pt;
+    margin-top: 30pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg138 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 350pt;
+    margin-top: 60pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg139 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 400pt;
+    margin-top: 60pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg140 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 490pt;
+    margin-top: 60pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg141 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 350pt;
+    margin-top: 90pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg142 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 400pt;
+    margin-top: 90pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg143 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 490pt;
+    margin-top: 90pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg144 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 350pt;
+    margin-top: 120pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg145 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 400pt;
+    margin-top: 120pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg146 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 490pt;
+    margin-top: 120pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg147 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 390pt;
+    margin-top: 165pt;
+    font-size: 31px;
+    font-weight: bold;
+}   
+
+.gfg148 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 165pt;
+    margin-left: 530pt;
+    font-size: 31px;
+    font-weight: bold;
+}
+
+.gfg149 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 350pt;
+    margin-top: 200pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg150 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 395pt;
+    margin-top: 200pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg151 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 480pt;
+    margin-top: 200pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg152 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 350pt;
+    margin-top: 230pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg153 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 395pt;
+    margin-top: 230pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg154 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 475pt;
+    margin-top: 230pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg155 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 350pt;
+    margin-top: 260pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg156 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 395pt;
+    margin-top: 260pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg157 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 485pt;
+    margin-top: 260pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg158 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 350pt;
+    margin-top: 290pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg159 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 388pt;
+    margin-top: 290pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg160 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 445pt;
+    margin-top: 290pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg161 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 520pt;
+    margin-top: 290pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg162 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 350pt;
+    margin-top: 320pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg163 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 388pt;
+    margin-top: 320pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg164 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 445pt;
+    margin-top: 320pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg165 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 525pt;
+    margin-top: 320pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg166 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 350pt;
+    margin-top: 350pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg167 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 380pt;
+    margin-top: 350pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg168 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 450pt;
+    margin-top: 350pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg169 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 350pt;
+    margin-top: 380pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg170 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 380pt;
+    margin-top: 380pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg171 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 454pt;
+    margin-top: 380pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg172 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 350pt;
+    margin-top: 410pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg173 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 393pt;
+    margin-top: 410pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg174 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 475pt;
+    margin-top: 410pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg175 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 350pt;
+    margin-top: 440pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg176 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 393pt;
+    margin-top: 440pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg177 {
+    font-size: 21px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-left: 480pt;
+    margin-top: 440pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg178 {
+    font-size: 140px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-bottom: 380pt;
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: bold;
+
+}
+
+.gfg179 { 
+    font-size: 140px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 750pt;
+    margin-left: 370pt;
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: bold;
+}
+
+.btn1 { 
+    position: absolute;
+    top: 400pt;
+    left: 160pt;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #13c27f;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn1:hover {
+    background-color: black;
+}
+
+a:link, a:visited {
+  color: white;
+  text-decoration: none;
+}
+</style>
+<body translate="no">
+    <header>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#project">Project</a>
+            <a href="#contact">Contact</a>        
+        </nav>
+        <div class="large ">
+            <img src="pic_graha2.jpg">
+        </div>	        
+    </header>
+    <div>
+    <section id="home">
+        <div class="gfg">
+            <img src="halo.jpg" width="1000pt" height="1000pt">
+            <div class="geeks"></div>
+            <div class="gfg1">PT. Graha Estetika Indonesia</div>
+            <div class="gfg2">Graha Estetika Indonesia is a Design and Built based construction company (General Contractor) which was founded in 2013. Our company serves various projects such as architecture, interior, landscape, civil and Mechanical-Electrical in residential buildings, offices and buildings. The project serves the Jabodetabek area and surrounding areas.</div>
+            <div class="gfg3">Graha Estetika Indonesia merupakan perusahaan konstruksi (General Contractor) yang berbasis Design and Built yang didirikan pada tahun 2013. Perusahaan kami melayani berbagai projek seperti arsitektur, interior, landscape, sipil dan ME pada bangunan rumah tinggal, kantor dan gedung. Projek kami melayani area Jabodetabek dan sekitarnya.</div>
+            <button class="btn1"><a href="#about">see details for more information</a>
+            </button>
+          </div>
+    </section>
+    <section id="about">
+        <div class="container reveal fade-left active">
+            <div class="text-container">
+              <div class="text-box">
+                    <div class="gfg4">About</div>
+                    <div class="gfg5">Visi</div>
+                    <div class="gfg6">Menjadikan</div>
+                    <div class="gfg7">perusahaan</div>
+                    <div class="gfg8">yang</div>
+                    <div class="gfg9">handal,</div>
+                    <div class="gfg10">terpercaya,</div>
+                    <div class="gfg11">transparan,</div>
+                    <div class="gfg12">&</div>
+                    <div class="gfg13">profesional</div>
+                    <div class="gfg14">yang</div>
+                    <div class="gfg15">berkelas</div>
+                    <div class="gfg16">dunia</div>
+                    <div class="gfg17">dengan</div>
+                    <div class="gfg18">didukung</div>
+                    <div class="gfg19">tenaga</div>
+                    <div class="gfg20">ahli</div>
+                    <div class="gfg21">demi</div>
+                    <div class="gfg22">kepuasan</div>
+                    <div class="gfg23">masyarakat,</div>
+                    <div class="gfg24">Misi</div>
+                    <div class="gfg25">Menghasilkan</div>
+                    <div class="gfg26">karya</div>
+                    <div class="gfg27">konstruksi</div>
+                    <div class="gfg28">yang</div>
+                    <div class="gfg29">fenomenal,</div>
+                    <div class="gfg30">Menjunjung</div>
+                    <div class="gfg31">tinggi</div>
+                    <div class="gfg32">konsep</div>
+                    <div class="gfg33">konstruksi</div>
+                    <div class="gfg34">hijau</div>
+                    <div class="gfg35">berwawasan</div>
+                    <div class="gfg36">lingkungan</div>
+                    <div class="gfg37">dan</div>
+                    <div class="gfg38">bangunan</div>
+                    <div class="gfg39">berkelanjutan,</div>
+                    <div class="gfg40">Menjaga</div>
+                    <div class="gfg41">hubungan</div>
+                    <div class="gfg42">kerja</div>
+                    <div class="gfg43">yang</div>
+                    <div class="gfg44">baik</div>
+                    <div class="gfg45">antar</div>
+                    <div class="gfg46">mitra</div>
+                    <div class="gfg47">maupun</div>
+                    <div class="gfg48">pelanggan</div>
+                    <div class="gfg49">dengan</div>
+                    <div class="gfg50">konsep</div>
+                    <div class="gfg51">kebersamaan,</div>
+                    <div class="gfg52">keterbukaan,</div>
+                    <div class="gfg53">dan</div>
+                    <div class="gfg54">permusyawarahan,</div>
+                    <div class="gfg55">Melaksanakan</div>
+                    <div class="gfg56">proyek</div>
+                    <div class="gfg57">konstruksi</div>
+                    <div class="gfg58">dengan</div>
+                    <div class="gfg59">memperhatikan</div>
+                    <div class="gfg60">biaya,</div>
+                    <div class="gfg61">mutu,</div>
+                    <div class="gfg62">waktu</div>
+                    <div class="gfg63">secara</div>
+                    <div class="gfg64">sistematis,</div>
+                    <div class="gfg65">jujur,</div>
+                    <div class="gfg66">amanah,</div>
+                    <div class="gfg67">dan</div>
+                    <div class="gfg68">terpercaya,</div>
+                    <div class="gfg69">dan</div>
+                    <div class="gfg70">menghasilkan</div>
+                    <div class="gfg71">karya</div>
+                    <div class="gfg72">arsitektur</div>
+                    <div class="gfg73">dengan</div>
+                    <div class="gfg74">memperhatikan</div>
+                    <div class="gfg75">nilai</div>
+                    <div class="gfg76">suatu</div>
+                    <div class="gfg77">bangunan.</div>
+                </div>
+            </div>
+          </div>
+          </div>
+          </section>
+
+    <section id="services">
+        <div class="container reveal fade-left active">
+            <div class="text-container">
+              <div class="text-box">
+                    <div class="gfg78">Services</div>
+                    <div class="gfg79">Construction</div>
+                    <div class="gfg80">-</div>
+                    <div class="gfg81">New</div>
+                    <div class="gfg82">Building</div>
+                    <div class="gfg83">-</div>
+                    <div class="gfg84">Renovation</div>
+                    <div class="gfg85">-</div>
+                    <div class="gfg86">Planning</div>
+                    <div class="gfg87">-</div>
+                    <div class="gfg88">Land</div>
+                    <div class="gfg89">Survey</div>
+                    <div class="gfg90">-</div>
+                    <div class="gfg91">Civil</div>
+                    <div class="gfg92">Works</div>
+                    <div class="gfg93">-</div>
+                    <div class="gfg94">Maintenance</div>
+                    <div class="gfg95">-</div>
+                    <div class="gfg96">Raised</div>
+                    <div class="gfg97">Floor</div>
+                    <div class="gfg98">-</div>
+                    <div class="gfg99">Building</div>
+                    <div class="gfg100">Demolition</div>
+                    <div class="gfg101">Electrical</div>
+                    <div class="gfg102">Construction</div>
+                    <div class="gfg103">-</div>
+                    <div class="gfg104">Cable</div>
+                    <div class="gfg105">Connection</div>
+                    <div class="gfg106">Installation</div>
+                    <div class="gfg107">-</div>
+                    <div class="gfg108">Cable</div>
+                    <div class="gfg109">Connection</div>
+                    <div class="gfg110">Repairing</div>
+                    <div class="gfg111">-</div>
+                    <div class="gfg112">Cable</div>
+                    <div class="gfg113">Dismantling</div>
+                    <div class="gfg114">-</div>
+                    <div class="gfg115">Electrical</div>
+                    <div class="gfg116">Switch</div>
+                    <div class="gfg117">Installation</div>
+                    <div class="gfg118">-</div>
+                    <div class="gfg119">Electrical</div>
+                    <div class="gfg120">Switch</div>
+                    <div class="gfg121">Replacment</div>
+                    <div class="gfg122">-</div>
+                    <div class="gfg123">Electrical</div>
+                    <div class="gfg124">Switch</div>
+                    <div class="gfg125">Dismantling</div>
+                    <div class="gfg126">-</div>
+                    <div class="gfg127">Electrical</div>
+                    <div class="gfg128">MCB</div>
+                    <div class="gfg129">Installation</div>
+                    <div class="gfg130">-</div>
+                    <div class="gfg131">Electrical</div>
+                    <div class="gfg132">MCB</div>
+                    <div class="gfg133">Replacment</div>
+                    <div class="gfg134">-</div>
+                    <div class="gfg135">Electrical</div>
+                    <div class="gfg136">MCB</div>
+                    <div class="gfg137">Dismantling</div>
+                    <div class="gfg138">-</div>
+                    <div class="gfg139">Lightning</div>
+                    <div class="gfg140">Installation</div>
+                    <div class="gfg141">-</div>
+                    <div class="gfg142">Lightning</div>
+                    <div class="gfg143">Replacment</div>
+                    <div class="gfg144">-</div>
+                    <div class="gfg145">Lightning</div>
+                    <div class="gfg146">Dismantling</div>
+                    <div class="gfg147">Pipeline</div>
+                    <div class="gfg148">Construction</div>
+                    <div class="gfg149">-</div>
+                    <div class="gfg150">Pipeline</div>
+                    <div class="gfg151">Installation</div>
+                    <div class="gfg152">-</div>
+                    <div class="gfg153">Pipeline</div>
+                    <div class="gfg154">Repairing</div>
+                    <div class="gfg155">-</div>
+                    <div class="gfg156">Pipeline</div>
+                    <div class="gfg157">Dismantling</div>
+                    <div class="gfg158">-</div>
+                    <div class="gfg159">Water</div>
+                    <div class="gfg160">Pump</div>
+                    <div class="gfg161">Installation</div>
+                    <div class="gfg162">-</div>
+                    <div class="gfg163">Water</div>
+                    <div class="gfg164">Pump</div>
+                    <div class="gfg165">Dismantling</div>
+                    <div class="gfg166">-</div>
+                    <div class="gfg167">Tap</div>
+                    <div class="gfg168">Installation</div>
+                    <div class="gfg169">-</div>
+                    <div class="gfg170">Tap</div>
+                    <div class="gfg171">Dismantling</div>
+                    <div class="gfg172">-</div>
+                    <div class="gfg173">Torrent</div>
+                    <div class="gfg174">Installation</div>
+                    <div class="gfg175">-</div>
+                    <div class="gfg176">Torrent</div>
+                    <div class="gfg177">Dismantling</div>
+                    </div>
+                    </div>
+                    </div>
+    </section>
+    <section id="project">
+        <div class="container1">
+            <div class="gfg179">Project</div>
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper ">
+                  <!-- Slides -->
+                  <div class="swiper-slide image1">
+                    <a target="_blank" href="bsd.jpg">
+                    <img class="image1__img" src="bsd.jpg" width="20pt"
+                    height="600pt" alt="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="Sabang.jpg">
+                    <img class="image1__img" src="Sabang.jpg" width="20pt"
+                    height="600pt" alt="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="mgw_cirebon.jpg">
+                    <img class="image1__img" src="mgw_cirebon.jpg" width="20pt"
+                    height="600pt" alt="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="Gallery_Bintaro.jpg">
+                    <img class="image1__img" src="Gallery_Bintaro.jpg" width="20pt"
+                    height="600pt" alt="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="Gallery_Serang.jpg">
+                    <img class="image1__img" src="Gallery_Serang.jpg" width="20pt"
+                    height="600pt" alt="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="gallery_cinere.jpg">
+                    <img class="image1__img" src="gallery_cinere.jpg" width="20pt"
+                    height="600pt" alt="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="gallery_pondok_gede.jpg">
+                    <img class="image1__img" src="gallery_pondok_gede.jpg" width="20pt"
+                    height="600pt" alt="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="gallery_depok.jpg">
+                    <img class="image1__img" src="gallery_depok.jpg" width="20pt"
+                    height="600pt" alt="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="gallery_fatmawati.jpg">
+                    <img class="image1__img" src="gallery_fatmawati.jpg" width="20pt"
+                    height="600pt" alt="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                  </a>
+                </div>
+
+
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+            </div>
+        </div>
+
+    </section>  
+    <section id="contact">
+        <div class="container2">
+        <div class="gfg178">Contact Us</div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.
+            3208230099967!2d106.67463857499047!3d-6.
+            221358793766688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+            1!3m3!1m2!1s0x2e69f9e6aedc18e9%3A0xb6c2a90722d2e6fd!2sPT.
+            %20GRAHA%20ESTETIKA%20INDONESIA%2F%20AURA%20GALERI!5e0!3m2!1sen!2sid!
+            4v1695779290355!5m2!1sen!2sid" width="6" height="45" style="border:0;" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <a href="https://wa.me/081283846633" target="_black"><i class="fa fa-whatsapp" style="font-size:40px"></i></a>
+        </section>
+    <script src="script.js"></script>
+</body>
+<script>
+    let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+ 
+        if(top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            });
+        };
+    });
+};
+</script>
+<script id="rendered-js">
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+    
+      for (var i = 0; i < reveals.length; i++) {if (window.CP.shouldStopExecution(0)) break;
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+    
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }window.CP.exitedLoop(0);
+    }
+    
+    window.addEventListener("scroll", reveal);
+    //# sourceURL=pen.js
+        </script>
+      <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+      <script>
+          const swiper = new Swiper('.swiper', {
+              autoplay: {
+                  delay: 3000,
+                  disableOnInteraction: false,
+              },
+        loop: true,
+      
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+      });
+      </script>          
+      </html>
